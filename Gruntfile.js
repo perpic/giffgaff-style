@@ -52,6 +52,13 @@ module.exports = function(grunt) {
                 src: ['src/less/giffgaff.less'],
                 dest: 'build/css/<%= pkg.name %>.min.css'
             }
+        },
+
+        glue: {
+            icons: {
+                src: 'assets/icons/*',
+                options: '--css=src/less/sprites --img=src/images/sprites --less --namespace=icon --margin=10 --optipng'
+            }
         }
     });
 
@@ -60,9 +67,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-recess');
+    grunt.loadNpmTasks('grunt-glue');
 
     // CSS distribution task.
-    grunt.registerTask('dist-css', ['recess']);
+    grunt.registerTask('dist-css', [
+        'glue',
+        'recess'
+    ]);
 
     grunt.registerTask('build', [
         'dist-css',

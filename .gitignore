@@ -2,3 +2,5 @@
 build
 node_modules
 src/bower_components
+src/less/sprites
+src/images/sprites
