@@ -7,7 +7,13 @@ module.exports = function(grunt) {
               ' * giffgaff styleguide v<%= pkg.version %> by @perpic\n' +
               ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
               ' */\n\n',
-    
+    watch: {
+      less: {
+        files: ['src/less/*.less'],
+        tasks: ['recess']
+      },
+    },
+
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -39,6 +45,7 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-recess');
 
   // CSS distribution task.
