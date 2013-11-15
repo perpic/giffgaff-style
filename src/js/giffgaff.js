@@ -1,3 +1,3 @@
 var test = 'hello world';
 
-alert(test);
+console.log(test);
