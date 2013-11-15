@@ -22,7 +22,7 @@ Install bower:
 
 # Init project
 
-## Install grunt and project dependencies
+## Install grunt and plugins
 
 Grunt setup involves two files: **package.json** and **Gruntfile.js**
 
