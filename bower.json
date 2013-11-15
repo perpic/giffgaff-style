@@ -1,0 +1,11 @@
+{
+  "name": "giffgaff",
+  "version": "0.0.0",
+  "dependencies": {
+  	"bootstrap": "~3.0.2",
+    "requirejs": "~2.1.8",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2"
+  },
+  "devDependencies": {}
+}
