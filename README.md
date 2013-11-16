@@ -20,6 +20,10 @@ Install bower:
 
 `$ npm install -g bower`
 
+## Install glue
+
+[Glue](https://github.com/jorgebastida/glue) is a simple command line tool to generate CSS sprites. Follow [instructions to install glue](http://glue.readthedocs.org/en/latest/installation.html).
+
 # Init project
 
 ## Install grunt and plugins
