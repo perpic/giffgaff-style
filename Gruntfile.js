@@ -41,28 +41,44 @@ module.exports = function(grunt) {
                 compile: true,
                 banner: '<%= banner %>'
             },
-            bootstrap: {
+            css: {
                 src: ['src/less/giffgaff.less'],
-                dest: 'build/css/<%= pkg.name %>.css'
+                dest: 'src/css/<%= pkg.name %>.css'
             },
             min: {
                 options: {
                     compress: true
                 },
                 src: ['src/less/giffgaff.less'],
-                dest: 'build/css/<%= pkg.name %>.min.css'
+                dest: 'src/css/<%= pkg.name %>.min.css'
             }
         },
 
         glue: {
             icons: {
                 src: 'assets/icons/*',
-                options: '--css=src/less/sprites --img=src/images/sprites --less --namespace=icon --margin=10 --optipng'
+                options: '--css=src/less/sprites --img=src/images/sprites --less --url=../images/sprites/ --namespace=icon --margin=10 --optipng'
             }
-        }
+        },
+
+        // Copy files not handled in other tasks here
+        copy: {
+            src: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/', 
+                    src: [
+                        'css/*',
+                        'images/**'
+                    ], 
+                    dest: 'build/'
+                }]
+            }
+        },
     });
 
     // These plugins provide necessary tasks.
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -70,14 +86,15 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-glue');
 
     // CSS distribution task.
-    grunt.registerTask('dist-css', [
+    grunt.registerTask('build-css', [
         'glue',
         'recess'
     ]);
 
     grunt.registerTask('build', [
-        'dist-css',
-        'uglify'
+        'build-css',
+        'uglify',
+        'copy:src'
     ]);
 
     // Default task(s).
