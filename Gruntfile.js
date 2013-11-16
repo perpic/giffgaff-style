@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         watch: {
             less: {
                 files: ['src/less/*.less'],
-                tasks: ['recess']
+                tasks: ['recess:css']
             }
         },
 
@@ -54,12 +54,28 @@ module.exports = function(grunt) {
         },
 
         uglify: {
-            options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            vendor: {
+                options: {
+                    mangle: false
+                },
+                files: {
+                    'build/js/vendor.min.js': [
+                        'src/bower_components/jquery/jquery.js',
+                        'src/bower_components/bootstrap/js/alert.js',
+                        'src/bower_components/bootstrap/js/modal.js',
+                        'src/bower_components/bootstrap/js/tab.js'
+                    ]
+                }
             },
-            build: {
-                src: 'src/js/<%= pkg.name %>.js',
-                dest: 'build/js/<%= pkg.name %>.min.js'
+            giffgaff: {
+                options: {
+                    banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                },
+                files: {
+                    'build/js/giffgaff.min.js': [
+                        'src/js/giffgaff.js'
+                    ]
+                }
             }
         },
         
@@ -70,14 +86,14 @@ module.exports = function(grunt) {
             },
             css: {
                 src: ['src/less/giffgaff.less'],
-                dest: 'src/css/<%= pkg.name %>.css'
+                dest: 'src/css/giffgaff.css'
             },
             min: {
                 options: {
                     compress: true
                 },
                 src: ['src/less/giffgaff.less'],
-                dest: 'build/css/<%= pkg.name %>.min.css'
+                dest: 'build/css/giffgaff.min.css'
             }
         },
 

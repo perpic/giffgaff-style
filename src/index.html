@@ -4,102 +4,42 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>giffgaff styleguide</title>
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="favicon.ico" rel="favicon">
         <link href="touch-icon.png" rel="apple-touch-icon" >
         <link href="css/giffgaff.css" media="screen" rel="stylesheet" type="text/css" >
-        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="footer-off">
-        <div id="wrapper">
-            <nav id="top-nav" class="navbar navbar-fixed-top" role="navigation"></nav>
-
-            <div class="container main-container">
-                <!-- CONTENT STARTS HERE! -->
+    <body>
+        <div id="wrap">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="Museo500">header</h1>
+                </div>
+                <p class="lead">lead</p>
                 
                 <div class="row">
-                    <div class="span12 span-wrap">
-                        <div class="box">
-                            <h1 class="head">Typography</h1>
-                            <div class="body">
-                                <div class="row-fluid">
-                                    <div class="span8">
-                                        <h2>h2</h2>
-                                        <h3>h3</h3>
-                                        <p>
-                                            Body copy: Arial regular or <strong>bold</strong><br/>
-                                            <span class="big">Bigger copy to emphasize data</span><br/>
-                                            <small>Small copy for extra information</small>
-                                        </p>
-                                        <p><a href="#" class="goto">Go to link</a></p>
-                                        <p><a href="#" class="more">More info link</a></p>
-                                    </div>
-                                    <div class="span4 right-column">
-                                        <h2 class="subtitled">h2</h2>
-                                        <h3>+ h3</h3>
-
-                                        <h2 class="with-label with-label-1">h2 with label</h2>
-                                    </div>
-                                </div>
-
-                                <hr/>
-                                
-                                <div class="row-fluid">
-                                    <div class="span8">
-                                        <h2>Lists</h2>
-                                        <p>Lists with class "<strong>list</strong>" make use of <strong>dark bullets</strong> for each element:
-                                        <ul class="list">
-                                            <li>
-                                                Item 1
-                                                <ul>
-                                                    <li>Sub-item 1</li>
-                                                </ul>
-                                            </li>
-                                            <li>Item 2 with a <a href="#">link</a></li>
-                                        </ul>
-                                        <p>Note that links are colored inside a list. Lists with class "<strong>list links</strong>" are displayed with a blue bullet:</p>
-                                        <ul class="list links">
-                                            <li><a class="goto" href="#">Item 1 link</a></li>
-                                            <li><a class="goto" href="#">Item 2 link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="span4 right-column">
-                                        <h2>Bullets</h2>
-                                        <p>
-                                            Colored bullets (<b>icon-8x8-bullet-{COLOR}</b>) are also available. List of colors:<br/>
-                                            <i class="icon-8x8-bullet-red"></i> red<br/>
-                                            <i class="icon-8x8-bullet-purple"></i> purple<br/>
-                                            <i class="icon-8x8-bullet-purple75"></i> purple75<br/>
-                                            <i class="icon-8x8-bullet-cian"></i> cian<br/>
-                                            <i class="icon-8x8-bullet-orange"></i> orange<br/>
-                                            <i class="icon-8x8-bullet-violet"></i> violet<br/>
-                                            <i class="icon-8x8-bullet-yellow"></i> yellow<br/>
-                                            <i class="icon-8x8-bullet-green"></i> green<br/>
-                                            <i class="icon-8x8-bullet-blue"></i> blue<br/>
-                                            <i class="icon-8x8-bullet-blue12"></i> blue12<br/>
-                                            <i class="icon-8x8-bullet-grey"></i> grey
-                                        </p>                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-md-12">
+                        <p>text</p>
                     </div>
                 </div>
-                
-                <!-- CONTENT ENDS HERE! -->
             </div>
-
-            <div id="push"></div>
         </div>
-        <footer id="footer"></footer>
+        <div id="footer">
+            <div class="container">
+                footer
+            </div>
+        </div>
 
         <!-- JS Placed at the end of the document so the pages load faster -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/jquery.js"></script>
-        <!-- endbower -->
+        <!-- vendor:js -->
+        <script src="../build/js/vendor.min.js"></script>
+        <!-- endvendor -->
 
         <script type="text/javascript" src="js/giffgaff.js"></script>
 
