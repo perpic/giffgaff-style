@@ -46,6 +46,10 @@ To install all bower components needed in this project run:
 
 The **default** way to run gunt is just `$ grunt`. This will peform a check first to validate js errors (jshint), and it will run build task, to prepare files for production.
 
-**Build** task can also be run manually without validation with: `$ grunt build`.
+**Build** task can also be run manually without validation with: 
 
-During **development**, run `$ grunt watch`. Grunt will listen for changes and update your src files.
+`$ grunt build`.
+
+During **development**, grunt can listen for changes and update your src files. Just run:
+
+`$ grunt watch`
