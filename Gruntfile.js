@@ -50,7 +50,7 @@ module.exports = function(grunt) {
                     compress: true
                 },
                 src: ['src/less/giffgaff.less'],
-                dest: 'src/css/<%= pkg.name %>.min.css'
+                dest: 'build/css/<%= pkg.name %>.min.css'
             }
         },
 
@@ -68,7 +68,6 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'src/', 
                     src: [
-                        'css/*',
                         'images/**'
                     ], 
                     dest: 'build/'
