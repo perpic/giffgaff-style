@@ -17,7 +17,23 @@ module.exports = function(grunt) {
                 'src/less/sprites',
                 'src/images/sprites',
             ],
-            build: 'build'
+            build: [
+                'build',
+                'dist'
+            ]
+        },
+
+        compress: {
+            main: {
+                options: {
+                    archive: 'dist/styleguide.tar.gz',
+                    mode: 'tar'
+                },
+                expand: true,
+                cwd: 'build/',
+                src: ['**/*'],
+                dest: 'styleguide/'
+            }
         },
 
         watch: {
@@ -93,6 +109,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-recess');
     grunt.loadNpmTasks('grunt-glue');
 
@@ -106,7 +123,8 @@ module.exports = function(grunt) {
         'clean',
         'build-css',
         'uglify',
-        'copy:src'
+        'copy:src',
+        'compress'
     ]);
 
     // Default task(s).
