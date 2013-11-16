@@ -48,7 +48,7 @@ The **default** way to run gunt is just `$ grunt`. This will peform a check firs
 
 **Build** task can also be run manually without validation with: 
 
-`$ grunt build`.
+`$ grunt build`
 
 During **development**, grunt can listen for changes and update your src files. Just run:
 
