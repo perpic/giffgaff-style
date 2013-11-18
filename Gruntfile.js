@@ -128,6 +128,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-recess');
     grunt.loadNpmTasks('grunt-glue');
+    grunt.loadNpmTasks('grunt-devtools');
 
     // CSS distribution task.
     grunt.registerTask('build-css', [
