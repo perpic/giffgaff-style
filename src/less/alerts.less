@@ -1,0 +1,21 @@
+// Customise bootstrap variables
+@alert-success-bg: #c5ffc7;
+@alert-success-border: @alert-success-bg;
+@alert-success-text: #0c740d;
+
+@alert-danger-bg: #ffb4c0;
+@alert-danger-border: @alert-danger-bg;
+@alert-danger-text: #a80c0a;
+
+// Custom styles
+.alert {
+	padding: 5px @alert-padding;
+
+	&-error {
+		.alert-danger;
+	}
+
+  	.close {
+    	line-height: 17px;
+  	}
+}

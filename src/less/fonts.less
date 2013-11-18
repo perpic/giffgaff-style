@@ -3,15 +3,15 @@
  * http://www.html5rocks.com/en/tutorials/webfonts/quick/
  */
 
-@typosUrl: '../typos';
+@museo500-regular-url: '../typos/museo500-regular/museo500-regular-webfont';
 
 @font-face {
     font-family: 'Museo500';
-    src: url("@{typosUrl}/museo500-regular/museo500-regular-webfont.eot");
-    src: url("@{typosUrl}/museo500-regular/museo500-regular-webfont.eot?#iefix") format('embedded-opentype'),
-            url("@{typosUrl}/museo500-regular/museo500-regular-webfont.woff") format('woff'),
-            url("@{typosUrl}/museo500-regular/museo500-regular-webfont.ttf") format('truetype'),
-            url("@{typosUrl}/museo500-regular/museo500-regular-webfont.svg#webfontmuseo500") format('svg');
+    src: url('@{museo500-regular-url}.eot');
+    src: local('☺'),
+        url('@{museo500-regular-url}.woff') format('woff'),
+        url('@{museo500-regular-url}.ttf') format('truetype'),
+        url('@{museo500-regular-url}.svg#font') format('svg');
     font-weight: normal;
     font-style: normal;
 }

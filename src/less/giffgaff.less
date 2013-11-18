@@ -1,11 +1,19 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
 
 // Customise bootstrap variables
+@border-radius-base: 5px;
 @gray-dark: #3c3c3c;
 @container-lg: @container-md;
 
+// Custom giffgaff variables
+@assetUrl: '../images';
+
+// Core CSS
 @import "fonts.less";
-@import "layout.less";
+@import "scaffolding.less";
+
+// Components
+@import "alerts.less";
 
 // Sprites
 @import "sprites.less";
